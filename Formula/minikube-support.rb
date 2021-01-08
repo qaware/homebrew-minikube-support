@@ -25,6 +25,7 @@ class MinikubeSupport < Formula
 
   depends_on "mkcert"
   depends_on "minikube"
+  depends_on "helm"
 
   def install
     bin.install "minikube-support"
