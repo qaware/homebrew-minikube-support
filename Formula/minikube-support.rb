@@ -7,7 +7,6 @@ class MinikubeSupport < Formula
   homepage "https://github.com/qaware/minikube-support"
   version "0.1.1"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
