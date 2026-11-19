@@ -6,25 +6,25 @@ cask "minikube-support" do
     end
   end
 
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
     on_arm do
-      sha256 "a9bf2b3d68271def9d355953f31c149163ba30e1327f15eac587115e6886047d"
+      sha256 "603cc2975a52dec9f9e217ccae6c360461703a36c584b068cc3bd0465b507a67"
       url "https://github.com/qaware/minikube-support/releases/download/v#{version}/minikube-support_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "9fea02094ae9960596d24b7df6d77233d7bbaa2ada18c392c3def25e7a5bba49"
+      sha256 "a3d9b2a2340486ac8274c462da5e3dc8bc0dce32f769e1555738da65bb859878"
       url "https://github.com/qaware/minikube-support/releases/download/v#{version}/minikube-support_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "c4b06883dd7907a238d8f346fe3fbf811764681ae187f472184deffa91e0bbb2"
+      sha256 "4404e102cc0dd687207e089a5087df42ebf9d2486ffe32b28ed024e16b4694e8"
       url "https://github.com/qaware/minikube-support/releases/download/v#{version}/minikube-support_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "2130af5f582ffa063a1119639e6bc5c3e8714952b7d403bf76de1e719149dace"
+      sha256 "81e417ebee3da784dad92c067687da08e9dba5a561ca3dc8fa94687e0960ccf3"
       url "https://github.com/qaware/minikube-support/releases/download/v#{version}/minikube-support_#{version}_linux_amd64.tar.gz"
     end
   end
@@ -44,8 +44,8 @@ cask "minikube-support" do
 
   binary "minikube-support"
   bash_completion "completions/minikube-support.bash"
-  fish_completion "completions/minikube-support.fish"
   zsh_completion "completions/minikube-support.zsh"
+  fish_completion "completions/minikube-support.fish"
 
-  # No zap stanza required
+  zap :not_required
 end
